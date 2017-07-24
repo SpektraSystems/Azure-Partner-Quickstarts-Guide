@@ -178,6 +178,293 @@ If you provide a parameter for these resource names, you must guess a unique nam
 "storageAccountName": "[concat(uniqueString(resourceGroup().id),'storage')]"
 }
 ````
+You may want to look at azure naming convention best practices available on below links
+* https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-infrastructure-naming-guidelines?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json
+* https://docs.microsoft.com/en-us/azure/guidance/guidance-naming-conventions
+
+### H.	Identifying and defining dependencies between resources
+For a given resource, there can be other resources that must exist before the resource is deployed. For example, a SQL server must exist before attempting to deploy a SQL database. You define this relationship by marking one resource as dependent on the other resource. You define a dependency with the dependsOn element, or by using the reference function. 
+
+Resource Manager evaluates the dependencies between resources, and deploys them in their dependent order. When resources are not dependent on each other, Resource Manager deploys them in parallel. You only need to define dependencies for resources that are deployed in the same template.
+
+**DependsOn**
+Within your template, the dependsOn element enables you to define one resource as a dependent on one or more resources. Its value can be a comma-separated list of resource names.
+
+When defining dependencies, you can include the resource provider namespace and resource type to avoid ambiguity. For example, to clarify a load balancer and virtual network that may have the same names as other resources, use the following format:
+
+````
+"dependsOn": [
+  "[concat('Microsoft.Network/loadBalancers/', variables('loadBalancerName'))]",
+  "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+]
+````
+While you may be inclined to use dependsOn to map relationships between your resources, it's important to understand why you're doing it. For example, to document how resources are interconnected, dependsOn is not the right approach. You cannot query which resources were defined in the dependsOn element after deployment. By using dependsOn, you potentially impact deployment time because Resource Manager does not deploy in parallel two resources that have a dependency. To document relationships between resources, instead use resource linking.
+
+**Dependencies Recommendations**
+
+*	Set as few dependencies as possible.
+*	Set a child resource as dependent on its parent resource.
+*	Use the reference function to set implicit dependencies between resources that need to share a property. Do not add an explicit dependency (dependsOn) when you have already defined an implicit dependency. This approach reduces the risk of having unnecessary dependencies.
+
+*	Set a dependency when a resource cannot be created without functionality from another resource. Do not set a dependency if the resources only interact after deployment.
+*	Let dependencies cascade without setting them explicitly. For example, your virtual machine depends on a virtual network interface, and the virtual network interface depends on a virtual network and public IP addresses. Therefore, the virtual machine is deployed after all three resources, but do not explicitly set the virtual machine as dependent on all three resources. This approach clarifies the dependency order and makes it easier to change the template later.
+*	If a value can be determined before deployment, try deploying the resource without a dependency. For example, if a configuration value needs the name of another resource, you might not need a dependency. This guidance does not always work because some resources verify the existence of the other resource. If you receive an error, add a dependency.
+
+Resource Manager identifies circular dependencies during template validation. If you receive an error stating that a circular dependency exists, evaluate your template to see if any dependencies are not needed and can be removed. If removing dependencies does not work, you can avoid circular dependencies by moving some deployment operations into child resources that are deployed after the resources that have the circular dependency
+
+### I.	Condition based templates deployment
+You can link to different templates by passing in a parameter value that is used to construct the URI of the linked template. This approach works well when you need to specify during deployment the linked template to use. For example, you can specify one template to use for an existing storage account, and another template to use for a new storage account.
+
+The following example shows a parameter for a storage account name, and a parameter to specify whether the storage account is new or existing.
+
+```
+"parameters": {
+    "storageAccountName": {
+        "type": "String"
+    },
+    "newOrExisting": {
+        "type": "String",
+        "allowedValues": [
+            "new",
+            "existing"
+        ]
+    }
+},      
+````
+You create a variable for the template URI that includes the value of the new or existing parameter
+````
+"variables": {
+    "templatelink": "[concat('https://raw.githubusercontent.com/exampleuser/templates/master/',parameters('newOrExisting'),'StorageAccount.json')]"
+},   
+````
+You provide that variable value for the deployment resource
+
+````
+"resources": [
+    {
+        "apiVersion": "2015-01-01",
+        "name": "linkedTemplate",
+        "type": "Microsoft.Resources/deployments",   
+"properties": {
+            "mode": "incremental",
+            "templateLink": {
+                "uri": "[variables('templatelink')]",
+                "contentVersion": "1.0.0.0"
+            },
+            "parameters": {
+                "StorageAccountName": {
+                    "value": "[parameters('storageAccountName')]"
+                }
+            }
+        }
+    }
+],
+````
+The URI resolves to a template named either **existingStorageAccount.json** or **newStorageAccount.json**. Create templates for those URIs. The following example shows the **existingStorageAccount.json** template.
+
+````
+"{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+      "type": "String"
+    }
+  },
+"variables": {},
+  "resources": [],
+  "outputs": {
+    "storageAccountInfo": {
+      "value": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('storageAccountName')),providers('Microsoft.Storage', 'storageAccounts').apiVersions[0])]",
+      "type" : "object"
+    }
+  }
+}
+````
+The next example shows the **newStorageAccount.json** template. Notice that like the existing storage account template the storage account object is returned in the outputs. The master template works with either linked template.
+
+````
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+		"type": "string"
+    	}
+  },
+resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[parameters('StorageAccountName')]",
+      "apiVersion": "2016-01-01",
+      "location": "[resourceGroup().location]",
+sku": {
+        "name": "Standard_LRS"
+},
+      "kind": "Storage",
+      "properties": {
+      }
+    }
+  ],
+  "outputs": {
+    "storageAccountInfo": {
+      "value": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('StorageAccountName')),providers('Microsoft.Storage', 'storageAccounts').apiVersions[0])]",
+      "type" : "object"
+    }
+  }
+}
+````
+### J.	High Availability Best Practices
+*	Create availability set for Virtual Machines. Recommended even if you’re creating single VM delivering the service, this allows users to add additional VM of same service in future easily.
+*	Use GRS as default type for storage account replication.
+*	Considering adding Load balancer to your Quickstart solution wherever applicable.  
+
+### K.	Use Key Vault to pass secure parameter value during deployment
+When you need to pass a secure value (like a password) as a parameter during deployment, you can retrieve the value from an 
+<a href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis">Azure Key Vault</a>. You retrieve the value by referencing the key vault and secret in your parameter file. The value is never exposed because you only reference its key vault ID. You do not need to manually enter the value for the secret each time you deploy the resources. The key vault can exist in a different subscription than the resource group you are deploying to. When referencing the key vault, you include the subscription ID.
+You should plan to use Key Vault to enhance the security of overall solutions. This could be pretty useful in scenarios of complex Quickstarts passing credentials or other secrets between resources. Learn more about Key Vault in ARM Templates 
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter">here</a>.
+
+### L.	Creating Multiple instances of resources
+**copy, copyIndex, and length**
+* Within the resource to create multiple times, you can define a copy object that specifies the number of times to iterate. The copy takes the following format.
+````
+"copy": { 
+    "name": "websites copy", 
+    "count": "[parameters('count')]" 
+} 
+````
+* You can access the current iteration value with the copyIndex() function. The following example uses copyIndex with the concat function to construct a name.
+````
+[concat('examplecopy-', copyIndex())]
+````
+* When creating multiple resources from an array of values, you can use the length function to specify the count. You provide the array as the parameter to the length function.
+````
+"copy": {
+    "name": "websitescopy",
+    "count": "[length(parameters('siteNames'))]"
+}
+"resources": [
+  {
+    "type": "{provider-namespace-and-type}"
+"name": "parentResource",
+    "copy": {  
+      /* yes, copy can be applied here */
+    },
+    "properties": {
+      "exampleProperty": {
+        /* no, copy cannot be applied here */
+      } },
+"resources": [
+      {
+        "type": "{provider-type}",
+"name": "childResource",
+        /* copy can be applied if resource is promoted to top level */ 
+      }
+    ]
+  } ]
+````
+* Although you cannot apply **copy** to a property, that property is still part of the iterations of the resource that contains the property. Therefore, you can use copyIndex() within the property to specify values.
+* There are several scenarios where you might want to iterate on a property in a resource. For example, you may want to specify multiple data disks for a virtual machine. To see how to iterate on a property, see <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-multiple#create-multiple-instances-when-copy-wont-work">Create multiple instances when copy won't work</a>.
+
+**Use Index value in name**
+You can use the copy operation create multiple instances of a resource that are uniquely named based on the incrementing index. For example, you might want to add a unique number to the end of each resource name that is deployed. To deploy three web sites named:
+
+*	examplecopy-0
+*	examplecopy-1
+*	examplecopy-2.
+
+Use the following template
+````
+"parameters": { 
+  "count": { 
+    "type": "int", 
+    "defaultValue": 3 
+  } 
+}, 
+"resources": [ 
+  { 
+      "name": "[concat('examplecopy-', copyIndex())]", 
+      "type": "Microsoft.Web/sites", 
+      "location": "East US", 
+      "apiVersion": "2015-08-01",
+      "copy": { 
+         "name": "websitescopy", 
+         "count": "[parameters('count')]" 
+      }, 
+      "properties": {
+          "serverFarmId": "hostingPlanName"
+      }
+  } 
+] 
+````
+**Offset index value**
+In the preceding example, the index value goes from zero to 2. To offset the index value, you can pass a value in the **copyIndex()** function, such as **copyIndex(1)**. The number of iterations to perform is still specified in the copy element, but the value of copyIndex is offset by the specified value. So, using the same template as the previous example, but specifying **copyIndex(1)** would deploy three web sites named:
+*	examplecopy-1
+*	examplecopy-2
+*	examplecopy-3
+
+
+**Use Copy with Array**
+The copy operation is helpful when working with arrays because you can iterate through each element in the array. To deploy three web sites named
+*	examplecopy-Contoso
+*	examplecopy-Fabrikam
+*	examplecopy-Coho
+Use the following template:
+````
+"parameters": { 
+  "org": { 
+     "type": "array", 
+     "defaultValue": [ 
+         "Contoso", 
+         "Fabrikam", 
+         "Coho" 
+      ] 
+  }
+}, 
+"resources": [ 
+  { 
+      "name": "[concat('examplecopy-', parameters('org')[copyIndex()])]", 
+      "type": "Microsoft.Web/sites", 
+      "location": "East US", 
+      "apiVersion": "2015-08-01",
+      "copy": { 
+         "name": "websitescopy", 
+         "count": "[length(parameters('org'))]" 
+      }, 
+      "properties": {
+          "serverFarmId": "hostingPlanName"
+      } 
+  }
+````
+### M.	Using Market place items in templates
+You should identify all the marketplace items used in the Quickstart and their licensing consideration. Using marketplace products have following consideration.
+
+*	You should always use marketplace image of any 3rd party product used in the Quickstart solution wherever available, instead of installing it manually using custom script extension. This simplifies the licenses and pricing of third party products
+*	Marketplace items requires programmatic deployment of marketplace item to be enabled in the subscription. You can do this by deploying the marketplace item in subscription manually via portal once.
+*	Marketplace items will require a payment method associated with subscriptions
+*	Ensure that Template Documentation describe all marketplace items used in the quickstart
+
+### N.	Identify Post Deployment Steps
+You should identify all post deployment steps which user may be required to perform after the deployment. Purpose of post deployment steps may include any of below, but not limited to these
+
+*	Access the deployed Services
+*	Basic Usage(Services in Action)
+*	Verify deployment 
+
+### O.	Development Tool
+
+ARM Quickstart template can be developed in any text editor, however it is recommended to use Visual Studio/Visual Studio Code. Visual Studio provides out of the box ARM Template development utilities.
+
+## 5.	Template Development Checklist
+### A.	Template Parameters Checklist  
+* Minimize parameters whenever possible. If you can use a variable or a literal, do so. Only provide parameters for:
+  * Settings you wish to vary by environment (such as sku, size, or capacity).
+  * Rsource names you wish to specify for easy identification.
+  * Values you use often to complete other tasks (such as admin user name).
+  * Secrets (such as passwords)
+  * The number or array of values to use when creating multiple instances of a resource type.
+  
 
 
 
