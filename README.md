@@ -125,7 +125,7 @@ A t-shirt size based on workload type, may be more free form in nature in terms 
 T-shirt sizes based on product offerings, such as community or Enterprise, may have distinct resource types and maximum number of nodes that can be deployed, typically tied to licensing considerations or feature availability across the different offerings.
 You can also accommodate customers with unique variants using the JSON-based templates. When dealing with outliers, you can incorporate the appropriate planning and considerations for development, support, and costing. Based on the customer template consumption scenarios, and requirements identified at the start of this document, we identified a pattern for template decomposition.
 
-###E.	Designing Modularity with Nested Templates
+### E.	Designing Modularity with Nested Templates
 To deploy your solution, you can use either a single template or a main template with multiple nested templates. Nested templates are common for more advanced scenarios. Nested templates contain the following advantages:
 * Provides benefits in terms of testing, reuse, and readability.
 * Can reuse nested templates with other main templates of different quickstart solutions.
@@ -135,7 +135,7 @@ When you decide to decompose your template design into multiple nested templates
 * **Optional resources template:** Conditionally deploys resources based on a parameter (for example, a jumpbox).
 *	**Member resources templates:** Each instance type within an application tier has its own configuration. Within a tier, different instance types can be defined (such as, first instance creates a cluster, additional instances are added to the existing cluster). Each instance type has its own deployment template.
 *	**Scripts:** Widely reusable scripts are applicable for each instance type (for example, initialize and format additional disks). Custom scripts are created for specific customization purpose are different per instance type.
-<img src="Images/Images"/> 
+<img src="Images/Images/1.png"/>
 
 
 
