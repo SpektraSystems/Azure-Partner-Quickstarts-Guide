@@ -620,6 +620,63 @@ It's also a good idea to format your JSON for better readability. You can use a 
 
 ### F.	Security Checklist
 
+You should be following below security best practices when designing and developing your template.
+
+* Network security should be used with all network configuration. 
+* NSG shouldn’t be configured to allow ANY-ANY ports. 
+* It is recommended to ask users to enter public CIDR as parameter template and NSG should be configured to allow access only from the CIDR value. 
+* There must not be any hardcoded passwords in template, custom script extensions etc. 
+* All artefact’s(nested template, scripts etc.) should be stored in azure Quickstart github repo only.
+
+### G.	Storing Public artifacts Checklist
+Most of the times templates may include artifacts and components which needs to be accessed during deployments. Some of these are
+  * Custom Scripts to be executed inside a VM
+  * PowerShell Modules/DSC Modules to be used
+  * Any other resources/components used by deployment
+
+When samples contain scripts, templates or other artifacts that need to be made available during deployment, using the standard parameters for staging those artifacts will enable command line deployment with the scripts provided at the root of the repository. This allows the template to be used in a variety of workflows without changing the templates or default parameters and the artifacts will be staged to a private location, rather than the public GitHub URI.
+
+First, define two standard parameters:
+* **_artifactsLocation:** This is the base URI where all artifacts for the deployment will be staged. The default value should be the samples folder so that the sample can be easily deployed in scenarios where a private location is not required.
+* **_artifactsLocationSasToken:** This is the sasToken required to access _artifactsLocation. The default value should be "" for scenarios where the _artifactsLocation is not secured, for example, the raw GitHub URI.
+````
+"parameters": {
+      "_artifactsLocation": {
+          "type": "string",
+          "metadata": {
+              "description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
+},
+          "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-vm-custom-script-windows/"
+      },
+      "_artifactsLocationSasToken": {
+          "type": "securestring",
+          "metadata": {
+              "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
+          },
+          "defaultValue": ""
+      } 
+  }, 
+````
+In this example, the custom script extension can be authored using a common pattern that can be applied to all resources that need staged artifacts as well as applied to all samples.
+````
+"properties": {
+      "publisher": "Microsoft.Compute",
+      "type": "CustomScriptExtension",
+      "typeHandlerVersion": "1.8",
+      "autoUpgradeMinorVersion": true,
+      "settings": {
+      "fileUris": [
+          "[concat(parameters('_artifactsLocation'), '/', variables('ScriptFolder'), '/', variables('ScriptFileName'), parameters('_artifactsLocationSasToken'))]"
+        ],
+      "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('ScriptFolder'), '/', variables('ScriptFileName'))]"
+        }
+  }
+````
+
+
+
+
+
 
   
 
