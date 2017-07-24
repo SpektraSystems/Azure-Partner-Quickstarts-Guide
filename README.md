@@ -20,7 +20,7 @@
   
    3.D: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3d-publish-the-quickstart">Publish the Quickstart</a>
   
-   3.E: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#esupport-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
+   3.E: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3e-support-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
   
    3.F: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#fpartnerquickstarts-portal">Partnerquickstarts Portal</a>
   
