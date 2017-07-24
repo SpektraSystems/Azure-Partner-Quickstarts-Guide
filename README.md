@@ -11,7 +11,7 @@
  1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
  2. [Who can contribute](#who-can-contribute)
  3. [How to Contribute:Process Flow](#how-to-contribute-process-flow)
- A. [Process Flowchart ](#process-flowchart)
+   A. [Process Flowchart ](#process-flowchart)
  4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
  5. [Template Development Checklist](#template-development-checklist)
  6. [Testing and Documentation](#testing-and-documentation)
