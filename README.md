@@ -464,6 +464,163 @@ ARM Quickstart template can be developed in any text editor, however it is recom
   * Values you use often to complete other tasks (such as admin user name).
   * Secrets (such as passwords)
   * The number or array of values to use when creating multiple instances of a resource type.
+* Parameter names should follow **camelCasing**.
+* Provide a description in the metadata for every parameter
+* Define default values for parameters (except for passwords and SSH keys). 
+* Use securestring for all passwords and secrets.
+* Any resources that need to be setup outside the template should be named prefixed with existing (e.g. existingVNET, existingDiagnosticsStorageAccount).
+* When possible, avoid using a parameter to specify the location. Instead, use the location property of the resource group. By using the resourceGroup().location expression for all your resources, the resources in the template are deployed in the same location as the resource group.
+* If a resource type is supported in only a limited number of locations, consider specifying a valid location directly in the template. If you must use a location parameter, share that parameter value as much as possible with resources that are likely to be in the same location. This approach minimizes users having to provide locations for every resource type.
+* Avoid using a parameter or variable for the API version for a resource type. Resource properties and values can vary by version number. Intellisense in code editors is not able to determine the correct schema when the API version is set to a parameter or variable. Instead, hard-code the API version in the template.
+* Do not create a parameter for a **storage account name**. Storage account names need to be lower case and can't contain hyphens (-) in addition to other domain name restrictions. A storage account has a limit of 24 characters. They also need to be globally unique. To prevent any validation issue, configure a variables (using the expression **uniqueString** and a static value **storage**). Storage accounts with a common prefix (uniqueString) will not get clustered on the same racks.
+````
+"variables": {
+     "storage": {
+         "name": "[concat(uniqueString(resourceGroup().id),'storage')]",
+         "type": "Standard_LRS"
+     }
+ },
+ "resources": [
+   {
+       "type": "Microsoft.Storage/storageAccounts",
+       "name": "[variables('storage').name]",
+       "apiVersion": "2016-01-01",
+       "location": "[resourceGroup().location]",
+       "sku": {
+           "name": "[variables('storage').type]"
+       },
+       ...
+   }
+ ]
+````
+* For many resources with a resource group, a name is not often relevant and using something a hard coded string "availabilitySet" may be acceptable. You can also use variables for the name of a resource and generate names for resources with globally unique names. Use **displayName** tags for a "friendly" name in the JSON outline view. This should ideally match the name property value or property name.
+````
+"resources": [
+ {
+   "name": "availabilitySet",
+   "type": "Microsoft.Compute/availabilitySets",
+   "apiVersion": "2015-06-15",
+   "location": "[resourceGroup().location]",
+   "tags": { "displayName": "appTierAS" },
+   "properties": {
+      ...
+   }
+}
+]
+````
+### B.	Template Variables Checklist  
+* Use variables for values that you need to use more than once in a template. If a value is used only once, a hard-coded value makes your template easier to read.
+
+* You cannot use the reference function in the variables section. The reference function derives its value from the resource's runtime state, but variables are resolved during the initial parsing of the template. Instead, construct values that need the reference function directly in the resources or outputs section of the template.
+
+* Name variables using this scheme templateScenarioResourceName (e.g. simpleLinuxVMVNET, userRoutesNSG, elasticsearchPublicIP etc.) that describe the scenario rather. This ensures when a user browses all the resources in the Portal there aren't a bunch of resources with the same name (e.g. myVNET, myPublicIP, myNSG)
+
+* Include variables for resource names that need to be unique, as shown in Resource names.
+
+* You can group variables into complex objects. You can reference a value from a complex object in the format variable.subentry. Grouping variables helps you track related variables and improves readability of the template.
+
+### C.	Template Resources Checklist
+* Use resourceGroup().location for resource locations to be compatible with all clouds
+* Specify **comments** for each resource in the template to help other contributors understand the purpose of the resource.
+````
+"resources": [
+   {
+       "name": "[variables('storageAccountName')]",
+       "type": "Microsoft.Storage/storageAccounts",
+       "apiVersion": "2016-01-01",
+       "location": "[resourceGroup().location]",
+       "comments": "This storage account is used to store the VM disks",
+       ...
+   }
+ ]
+````
+* Use tags to add metadata to resources that enable you to add additional information about your resources. For example, you can add metadata to a resource for billing detail purposes. For more information, see <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags">Using tags to organize your Azure resources</a> . Specify tags properties below comments line.
+* If you use a **public endpoint** in your template (such as a blob storage public endpoint), **do not hardcode** the namespace. Use the **reference** function to retrieve the namespace dynamically. This approach allows you to deploy the template to different public namespace environments, without manually changing the endpoint in the template. Set the apiVersion to the same version you are using for the storageAccount in your template.
+````
+"osDisk": {
+     "name": "osdisk",
+     "vhd": {
+         "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), '2016-01-01').primaryEndpoints.blob, variables('vmStorageAccountContainerName'), '/',variables('OSDiskName'),'.vhd')]"
+     }
+ }
+````
+* If the storage account is deployed in the same template, you do not need to specify the provider namespace when referencing the resource. The simplified syntax is:
+````
+"osDisk": {
+     "name": "osdisk",
+     "vhd": {
+         "uri": "[concat(reference(variables('storageAccountName'), '2016-01-01').primaryEndpoints.blob, variables('vmStorageAccountContainerName'), '/',variables('OSDiskName'),'.vhd')]"
+     }
+ }   
+````
+* If you have other values in your template configured with a public namespace, change these values to reflect the same reference function. For example, the storageUri property of the virtual machine diagnosticsProfile. You can also reference an existing storage account in a different resource group.
+````
+diagnosticsProfile": {
+     "bootDiagnostics": {
+         "enabled": "true",
+         "storageUri": "[reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), '2016-01-01').primaryEndpoints.blob]"
+     }
+ } 
+````
+
+````
+"osDisk": {
+     "name": "osdisk", 
+     "vhd": {
+         "uri":"[concat(reference(resourceId(parameters('existingResourceGroup'), 'Microsoft.Storage/storageAccounts/', parameters('existingStorageAccountName')), '2016-01-01').primaryEndpoints.blob,  variables('vmStorageAccountContainerName'), '/', variables('OSDiskName'),'.vhd')]"
+     }
+ } 
+````
+* Assign publicIPAddresses to a virtual machine only when required for an application. To connect for debug, management or administrative purposes, use either inboundNatRules, virtualNetworkGateways or a jumpbox.
+* The **domainNameLabel** property for publicIPAddresses must be unique. domainNameLabel is required to be between 3 and 63 characters long and to follow the rules specified by this regular expression ([a-z][a-z0-9-]{1,61}[a-z0-9]$) As the uniqueString function generates a string that is 13 characters long, the dnsPrefixString parameter is limited to no more than 50 character
+````
+"parameters": {
+     "dnsPrefixString": {
+         "type": "string",
+         "maxLength": 50,
+         "metadata": {
+             "description": "DNS Label for the Public IP. Must be lowercase. It should match with the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$ or it will raise an error."
+         }
+     }
+ },
+ "variables": {
+     "dnsPrefix": "[concat(parameters('dnsPrefixString'),uniquestring(resourceGroup().id))]"
+ }
+````
+* When adding a password to a **customScriptExtension**, use the **commandToExecute** property in protectedSettings.
+````
+"properties": {
+     "publisher": "Microsoft.Azure.Extensions",
+     "type": "CustomScript",
+     "typeHandlerVersion": "2.0",
+     "autoUpgradeMinorVersion": true,
+     "settings": {
+         "fileUris": [
+             "[concat(variables('template').assets, '/lamp-app/install_lamp.sh')]"
+         ]
+     },
+     "protectedSettings": {
+         "commandToExecute": "[concat('sh install_lamp.sh ', parameters('mySqlPassword'))]"
+     }
+ } 
+````
+* Any VM Extension should be part of VM resource as a child resource.
+### D.	Template Outputs Checklist
+* If a template creates **publicIPAddresses**, it should have an **outputs** section that returns details of the IP address and the fully qualified domain name. These output values enable you to easily retrieve these details after deployment. When referencing the resource, use the API version that was used to create it. 
+````
+"outputs": {
+    "fqdn": {
+        "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses',parameters('publicIPAddressName')), '2016-07-01').dnsSettings.fqdn]",
+        "type": "string"
+    }, 
+````
+### E.	Code Formatting
+* It is a good practice to pass your template through a JSON validator to remove extraneous commas, parenthesis, brackets that may cause an error during deployment. Try <a href="https://jsonlint.com/">JSONlint</a> or a linter package for your favourite editing environment (Visual Studio Code, Atom, Sublime Text, Visual Studio, etc.).
+It's also a good idea to format your JSON for better readability. You can use a JSON formatter package for your local editor. In Visual Studio, format the document with Ctrl+K, Ctrl+D. In VS Code, use Alt+Shift+F. You can use a JSON formatter package for your local editor or <a href="https://www.bing.com/search?q=json+formatter">format online using this link</a> .
+
+### F.	Security Checklist
+
+
   
 
 
