@@ -12,17 +12,17 @@
 2. [Who can contribute](#who-can-contribute)
 3. [How to Contribute:Process Flow](#how-to-contribute-process-flow)
  
-   3.A <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3a-process-flowchart">Process Flowchart</a>
+   3.A: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3a-process-flowchart">Process Flowchart</a>
   
-   3.B <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#bidea-acceptance-phase">Idea Acceptance Phase</a>
+   3.B: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#bidea-acceptance-phase">Idea Acceptance Phase</a>
   
-   3.C <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#ctemplate-development-testing--documentation">Template Development, Testing & Documentation</a>
+   3.C: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#ctemplate-development-testing--documentation">Template Development, Testing & Documentation</a>
   
-   3.D <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#dpublish-the-quickstart">Publish the Quickstart</a>
+   3.D: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#dpublish-the-quickstart">Publish the Quickstart</a>
   
-   3.E <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#esupport-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
+   3.E: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#esupport-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
   
-   3.F <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#fpartnerquickstarts-portal">Partnerquickstarts Portal</a>
+   3.F: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#fpartnerquickstarts-portal">Partnerquickstarts Portal</a>
   
 4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
 5. [Template Development Checklist](#template-development-checklist)
@@ -52,12 +52,12 @@ Templates should be targeting a specific scenario workload, or some of the commo
  * Microsoft Partners
  
 ## How to Contribute: Process Flow
-### 3.A Process Flowchart 
+### 3.A: Process Flowchart 
 Quickstart solutions goes through multiple checks and validation before getting published on
 <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners portal</a> Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  Microsoft QuickStart team will work with you for this process. 
 <img src="Images/Images/1.png"/> 
 
-### B.	Idea Acceptance Phase
+### 3.B: Idea Acceptance Phase
 
 Partner needs to submit a quickstart specification documentation to Microsoft. 
 Specification document should include
@@ -74,7 +74,7 @@ Once the template idea is submitted, Microsoft will review the request update th
 *	Rejected
 Partner may have to modify the solution idea, if so recommended by Microsoft. Once Quickstart idea is approved, Kick-off meeting will be scheduled to discuss the solution aspects and timelines for go-live of Quickstart.
 
-### C.	Template Development, Testing & Documentation
+### 3.C: Template Development, Testing & Documentation
 After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions:
 * Understand and follow <!-- TOC -->[Solution Design Consideration](#quickstart-technical-solution-best-practices)<!-- /TOC --> best practices available in this document.
 * Understand and follow <!-- TOC -->[template development checklist](#template-development-checklist)<!-- /TOC --> available in this document.
@@ -86,7 +86,7 @@ After acceptance of the Quickstart idea, Partner may start to develop the Quicks
 *	Develop the required documentation for the Quickstart following best practices given <!-- TOC -->[click](#documentation-and-files )<!-- /TOC -->
 * Test the Quickstart in every scenario available <!-- TOC -->[click](#testing-the-quickStart-template)<!-- /TOC -->
 
-### D.	Publish the Quickstart
+### 3.D: Publish the Quickstart
 Once template development partner has completed all steps in <!-- TOC -->[Section-C](#template-development,testing-&-documentation)<!-- /TOC -->, they can move to validation phase of the solution and launch the Quickstart for public access.
 * Submit the Quickstart to Azure Quickstart validation partner for validation of the solution. Follow <!-- TOC -->[](#validation-with-template-validation-partner)<!-- /TOC --> to learn more
 * Incorporate any feedback provided by azure Quickstart validation partner and submit Pull Request to submit the Quickstart to 
@@ -95,11 +95,11 @@ Once template development partner has completed all steps in <!-- TOC -->[Sectio
 * Add the quickstart to partner Quickstarts <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">Portal</a>
 * Quickstart template will get launched on <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners web page</a>. Launch activities may also include formal announcement on social media and blogs, as applicable. 
 
-### E.	Support and Maintenance & Breakfix
+### 3.E: Support and Maintenance & Breakfix
 Template development partner should be providing the post publishing support, maintenance and updates on the quickstart as and when required.
 * Follow  <!-- TOC -->[Support and Maintenance](#maintenance,-updates-and-support )<!-- /TOC --> Guidelines available in this document.
 
-### F.	Partnerquickstarts Portal 
+### 3.F: Partnerquickstarts Portal 
 Template development partner should be using partner quickstart portal (https://partnerquickstarts.azurewebsites.net) for end to end lifecycle management of the Quickstarts.
 * Request login for the portal if not available already by writing to Email :- **quickstartsupport@spektrasystems.com**
 Portal can be used for:
