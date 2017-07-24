@@ -19,6 +19,7 @@ Templates should be targeting a specific scenario workload, or some of the commo
 ### A.	Process Flowchart 
 Quickstart solutions goes through multiple checks and validation before getting published on
 <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners portal</a> Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  Microsoft QuickStart team will work with you for this process. 
+<img src="Images/Images/1.png"/> 
 
 ### B.	Idea Acceptance Phase
 
@@ -39,13 +40,17 @@ Partner may have to modify the solution idea, if so recommended by Microsoft. On
 
 ### C.	Template Development, Testing & Documentation
 After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions:
+* Understand and follow **Solution Design Consideration** best practices available in this document.
+* Understand and follow **template development checklist**  available in this document.
+* Build the QuickStart template comprising.
+  *  azuredeploy.json Template File
+  *  Nested templates if any
+  *  azuredeploy.parameters.json file
+  *  Documentations as specified in **Section-5**
+*	Develop the required documentation for the Quickstart following best practices given **here**
+* Test the Quickstart in every scenario available **here**
 
-*	Understand and follow Solution Design Consideration best practices available in this document
-*	Understand and follow template development checklist  available in this document 
-*	Build the QuickStart template comprising
-  * Azuredeploy.json Template File
-  * Nested templates if any
-  * Azuredeploy.parameters.json file
-  * Documentations as specified in Section-5
-*	Develop the required documentation for the Quickstart following best practices given here
-*	Test the Quickstart in every scenario available here
+
+
+
+
