@@ -3,7 +3,8 @@
  **Azure Partner Quickstarts: Contributor’s Guide**
  <!-- TOC -->
  
- 1. [What is Azure Quickstart by template partners](#What-is-Azure-Quickstart-by-template-partners)
+ 1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
+ 2. [Who can contribute](#who-can-contribute)
  
  
  <!-- /TOC --> 
