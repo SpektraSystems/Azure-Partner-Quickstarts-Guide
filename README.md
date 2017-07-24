@@ -12,17 +12,17 @@
 2. [Who can contribute](#who-can-contribute)
 3. [How to Contribute:Process Flow](#how-to-contribute-process-flow)
  
-   3.A <a href="https://portal.azure.com">Process Flowchart</a>
+   3.A <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3a-process-flowchart">Process Flowchart</a>
   
-   3.B <a href="https://portal.azure.com">Process Flowchart</a>
+   3.B <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#bidea-acceptance-phase">Idea Acceptance Phase</a>
   
-   3.C <a href="https://portal.azure.com">Process Flowchart</a>
+   3.C <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#ctemplate-development-testing--documentation">Template Development, Testing & Documentation</a>
   
-   3.D <a href="https://portal.azure.com">Process Flowchart</a>
+   3.D <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#dpublish-the-quickstart">Publish the Quickstart</a>
   
-   3.E <a href="https://portal.azure.com">Process Flowchart</a>
+   3.E <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#esupport-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
   
-   3.F <a href="https://portal.azure.com">Process Flowchart</a>
+   3.F <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#fpartnerquickstarts-portal">Partnerquickstarts Portal</a>
   
 4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
 5. [Template Development Checklist](#template-development-checklist)
