@@ -66,7 +66,7 @@ After acceptance of the Quickstart idea, Partner may start to develop the Quicks
 * Understand and follow 
  <!-- TOC -->
  
- [Solution Design Consideration](#solution-design-considerations)
+ [Solution Design Consideration](#quickstart-technical-solution-best-practices)
 
  
  
