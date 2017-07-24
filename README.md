@@ -1,5 +1,4 @@
 # Azure-Partner-Quickstarts-Guide
-````
 # Table of Contents
 **Azure Partner Quickstarts: Contributor’s Guide**
 * **1.What is Azure Quickstart by template partners**
@@ -35,9 +34,6 @@
   * E.	Code Formatting
   * F.	Security Checklist
   * G.	Storing Public artifacts Checklist
- 
-````
-
 
 ## 1.	What is Azure Quickstart by template partners 
 Want to learn how to save time when launching full-stack solutions in the cloud? Azure Partner Quickstarts are 
