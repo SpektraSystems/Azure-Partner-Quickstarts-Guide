@@ -41,9 +41,9 @@ After acceptance of the Quickstart idea, Partner may start to develop the Quicks
 *	Understand and follow Solution Design Consideration best practices available in this document
 *	Understand and follow template development checklist  available in this document 
 *	Build the QuickStart template comprising
- *	azuredeploy.json Template File
- * Nested templates if any
- * azuredeploy.parameters.json file
- * Documentations as specified in Section-5
+  * Azuredeploy.json Template File
+  * Nested templates if any
+  * Azuredeploy.parameters.json file
+  * Documentations as specified in Section-5
 *	Develop the required documentation for the Quickstart following best practices given here
 *	Test the Quickstart in every scenario available here
