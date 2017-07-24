@@ -36,7 +36,7 @@ Once the template idea is submitted, Microsoft will review the request update th
 Partner may have to modify the solution idea, if so recommended by Microsoft. Once Quickstart idea is approved, Kick-off meeting will be scheduled to discuss the solution aspects and timelines for go-live of Quickstart.
 
 ### C.	Template Development, Testing & Documentation
-After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions.
+After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions:
 
 *	Understand and follow Solution Design Consideration best practices available in this document
 *	Understand and follow template development checklist  available in this document 
