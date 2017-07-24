@@ -8,7 +8,6 @@
  
  <!-- /TOC --> 
  
-* **1.What is Azure Quickstart by template partners**
 * **2.Who can contribute**
 * **3.	How to Contribute: Process Flow**
   * A.	Process Flowchart
