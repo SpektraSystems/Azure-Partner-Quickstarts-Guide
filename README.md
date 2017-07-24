@@ -11,7 +11,9 @@
  1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
  2. [Who can contribute](#who-can-contribute)
  3. [How to Contribute:Process Flow](#how-to-contribute-process-flow)
-   A. [Process Flowchart ](#process-flowchart)
+ 
+ <a href="https://portal.azure.com">3.A Process Flowchart</a>
+ 
  4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
  5. [Template Development Checklist](#template-development-checklist)
  6. [Testing and Documentation](#testing-and-documentation)
@@ -40,7 +42,7 @@ Templates should be targeting a specific scenario workload, or some of the commo
  * Microsoft Partners
  
 ## How to Contribute: Process Flow
-### Process Flowchart 
+### 3.A Process Flowchart 
 Quickstart solutions goes through multiple checks and validation before getting published on
 <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners portal</a> Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  Microsoft QuickStart team will work with you for this process. 
 <img src="Images/Images/1.png"/> 
