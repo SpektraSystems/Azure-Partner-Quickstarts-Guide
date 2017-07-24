@@ -63,7 +63,15 @@ Partner may have to modify the solution idea, if so recommended by Microsoft. On
 
 ### C.	Template Development, Testing & Documentation
 After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions:
-* Understand and follow **Solution Design Consideration** best practices available in this document.
+* Understand and follow 
+ <!-- TOC -->
+ 
+ [Solution Design Consideration](#solution-design-considerations)
+
+ 
+ 
+ 
+ <!-- /TOC --> best practices available in this document.
 * Understand and follow **template development checklist**  available in this document.
 * Build the QuickStart template comprising.
   *  azuredeploy.json Template File
