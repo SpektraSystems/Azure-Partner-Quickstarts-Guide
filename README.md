@@ -1,4 +1,4 @@
-# Azure-Partner-Quickstarts-Guide
+# <a name="Azure-Partner-Quickstarts-Guide"></a>Azure-Partner-Quickstarts-Guide
 # Table of Contents
 **Azure Partner Quickstarts: Contributor’s Guide**
 * **1.What is Azure Quickstart by template partners**
