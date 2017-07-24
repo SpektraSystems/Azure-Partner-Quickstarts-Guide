@@ -1,6 +1,9 @@
 # Azure-Partner-Quickstarts-Guide
 * # Table of Contents
  **Azure Partner Quickstarts: Contributor’s Guide**
+ 
+ 
+ 
  <!-- TOC -->
  
  1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
