@@ -142,5 +142,46 @@ You can follow below articles to learn more about passing values and sharing sta
 * https://docs.microsoft.com/en-us/azure/azure-resource-manager/best-practices-resource-manager-state 
 * https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-linked-templates
 
+### F.	Identify and build template Pre-requisite (if any)
+If you’re building a template which needs some existing resources in subscription to complete the deployment, it is recommended to create a pre-requisite azure deployment template.
+Some of the examples of existing resources includes-
+*	Virtual Network 
+*	Storage Account
+*	Key vault
+Some users may or may not have these existing resources ready, which may lead to a deployment failure of the solution template. To avoid this, it is recommended to create a azureprereqdeploy.json ARM template which can be deployed before the actual Quickstart to avoid deployment failure of main Quickstart solution due to existing resources. Partner should also add this is documentation.
+Considerations:
+*	Identify Number and type of pre-req components for the Quickstart
+*	Create ARM template to create the existing resources
+*	Output the name’s etc. values in the pre-req template deployment
+*	Update the documentation/process to share these details to the users who doesn’t have existing resources created already.
+
+### G.	Working with Unique Resource Name’s
+There are generally three types of resource names you work with:
+*	Resource names that must be unique across the azure cloud.
+*	Resource names that do not need to be unique but you want to provide a name that helps identify the context.
+*	Resource names that can be generic.
+
+**Unique resource names**
+
+You must provide a unique resource name for any resource type that has a data access endpoint. Some common types that require a unique name include:
+*	Storage account
+*	Web site
+*	SQL server
+*	Key vault
+*	Redis cache
+*	Etc.
+Furthermore, storage account names must be lower-case, 24 characters or less, and not include any hyphens.
+
+If you provide a parameter for these resource names, you must guess a unique name during deployment. Instead, you can create a variable that uses the uniqueString() function to generate a name. Frequently, you also want to add a prefix or postfix to the uniqueString result so you can more easily determine the resource type by looking at the name. For example, you generate a unique name for a storage account with the following variable:
+````
+"variables": {
+"storageAccountName": "[concat(uniqueString(resourceGroup().id),'storage')]"
+}
+````
+
+
+
+
+
 
 
