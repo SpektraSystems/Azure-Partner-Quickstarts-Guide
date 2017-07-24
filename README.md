@@ -1,6 +1,6 @@
 # Azure-Partner-Quickstarts-Guide
-* # Table of Contents
- **Azure Partner Quickstarts: Contributor’s Guide**
+
+## Azure Partner Quickstarts: Contributor’s Guide
  
  
  
