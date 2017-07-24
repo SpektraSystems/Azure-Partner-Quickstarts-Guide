@@ -1,7 +1,7 @@
-# <a name="Azure-Partner-Quickstarts-Guide"></a>Azure-Partner-Quickstarts-Guide
+# Azure-Partner-Quickstarts-Guide
 # Table of Contents
 **Azure Partner Quickstarts: Contributor’s Guide**
-* **1.What is Azure Quickstart by template partners**
+* <a name="1.What is Azure Quickstart by template partners"></a>**1.What is Azure Quickstart by template partners**
 * **2.Who can contribute**
 * **3.	How to Contribute: Process Flow**
   * A.	Process Flowchart
