@@ -22,7 +22,7 @@
  <!-- /TOC --> 
  
 
-## What is Azure Quickstart by template partners
+## 1. What is Azure Quickstart by template partners
 
 Want to learn how to save time when launching full-stack solutions in the cloud? Azure Partner Quickstarts are 
 <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview">Azure Resource Manager templates</a> created by trusted Microsoft partners and designed to help you get started with integrated, multi-artifact solutions rather than single applications or services on Azure. 
