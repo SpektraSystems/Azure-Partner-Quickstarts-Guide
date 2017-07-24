@@ -1,7 +1,8 @@
 # Azure-Partner-Quickstarts-Guide
 
 ## 1.	What is Azure Quickstart by template partners 
-Want to learn how to save time when launching full-stack solutions in the cloud? Azure Partner Quickstarts are Azure Resource Manager templates created by trusted Microsoft partners and designed to help you get started with integrated, multi-artifact solutions rather than single applications or services on Azure. 
+Want to learn how to save time when launching full-stack solutions in the cloud? Azure Partner Quickstarts are 
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview">Azure Resource Manager templates</a> created by trusted Microsoft partners and designed to help you get started with integrated, multi-artifact solutions rather than single applications or services on Azure. 
 These templates are constructed to launch solutions comprising multiple applications and services from both Microsoft and Microsoft software partners, open source and proprietary. These Quickstarts help automate much of the manual work that would be otherwise normally be involved in stitching artifacts together.
 
 Quickstarts are available on Partner QS portal -  https://partnerquickstarts.azurewebsites.net/ . This portal is also used for end to end management of partner Quickstarts lifecycle.
@@ -16,7 +17,8 @@ Templates should be targeting a specific scenario workload, or some of the commo
  
 ## 3.	How to Contribute: Process Flow
 ### A.	Process Flowchart 
-Quickstart solutions goes through multiple checks and validation before getting published on azure Quickstarts from Microsoft partners portal Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  Microsoft QuickStart team will work with you for this process. 
+Quickstart solutions goes through multiple checks and validation before getting published on
+<a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners portal</a> Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  Microsoft QuickStart team will work with you for this process. 
 
 ### B.	Idea Acceptance Phase
 
