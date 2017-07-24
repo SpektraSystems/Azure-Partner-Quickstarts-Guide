@@ -137,5 +137,9 @@ When you decide to decompose your template design into multiple nested templates
 *	**Scripts:** Widely reusable scripts are applicable for each instance type (for example, initialize and format additional disks). Custom scripts are created for specific customization purpose are different per instance type.
 <img src="Images/Images/2.png"/>
 
+You can follow below articles to learn more about passing values and sharing state between templates : 
+* https://docs.microsoft.com/en-us/azure/azure-resource-manager/best-practices-resource-manager-state 
+* https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-linked-templates
+
 
 
