@@ -1,6 +1,6 @@
 # Azure-Partner-Quickstarts-Guide
-
-## Azure Partner Quickstarts: Contributor’s Guide
+##Table of Contents
+### Azure Partner Quickstarts: Contributor’s Guide
  
  
  
@@ -8,6 +8,13 @@
  
  1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
  2. [Who can contribute](#who-can-contribute)
+ 3. [How to Contribute: Process Flow](#how-to-contribute:-process-flow)
+ 4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
+ 5. [Template Development Checklist](#template-development-checklist)
+ 6. [Testing and Documentation](#testing-and-documentation)
+ 7. [Publishing the Solution.](#publishing-the-solution.)
+ 8. [Maintenance, Updates and Support](#maintenance,-updates-and-support)
+ 
  
  
  <!-- /TOC --> 
@@ -29,7 +36,7 @@ Templates should be targeting a specific scenario workload, or some of the commo
 ## Who can contribute
  * Microsoft Partners
  
-## 3.	How to Contribute: Process Flow
+## How to Contribute: Process Flow
 ### A.	Process Flowchart 
 Quickstart solutions goes through multiple checks and validation before getting published on
 <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners portal</a> Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  Microsoft QuickStart team will work with you for this process. 
@@ -86,7 +93,7 @@ Portal can be used for:
 * Verify last validation reports.
 * Update Status if QS validation fails.
 
-## 4.	Quickstart Technical Solution Best Practices   
+## Quickstart Technical Solution Best Practices   
 ### A.	Envision the Quickstart architecture 
 First step towards building a good Quickstart would be to draw the overall low-level architecture of the solution. You should start developing template once this architecture design is finalized. Architecture design should contain overall solution components such as Virtual Network, Subnet’s, Storage accounts, Virtual Machines, App Service etc. Sample architecture diagram can be found **here**.
 ### B.	Azure Region Support 
@@ -470,7 +477,7 @@ You should identify all post deployment steps which user may be required to perf
 
 ARM Quickstart template can be developed in any text editor, however it is recommended to use Visual Studio/Visual Studio Code. Visual Studio provides out of the box ARM Template development utilities.
 
-## 5.	Template Development Checklist
+## Template Development Checklist
 ### A.	Template Parameters Checklist  
 * Minimize parameters whenever possible. If you can use a variable or a literal, do so. Only provide parameters for:
   * Settings you wish to vary by environment (such as sku, size, or capacity).
