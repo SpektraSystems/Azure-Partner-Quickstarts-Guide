@@ -18,7 +18,7 @@
   
    3.C: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3c-template-development-testing--documentation">Template Development, Testing & Documentation</a>
   
-   3.D: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#dpublish-the-quickstart">Publish the Quickstart</a>
+   3.D: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3d-publish-the-quickstart">Publish the Quickstart</a>
   
    3.E: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#esupport-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
   
