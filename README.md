@@ -22,7 +22,7 @@
   
    3.E: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3e-support-and-maintenance--breakfix">Support and Maintenance & Breakfix</a>
   
-   3.F: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#fpartnerquickstarts-portal">Partnerquickstarts Portal</a>
+   3.F: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3f-partnerquickstarts-portal">Partnerquickstarts Portal</a>
   
 4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
 5. [Template Development Checklist](#template-development-checklist)
