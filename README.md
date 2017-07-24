@@ -16,7 +16,7 @@
   
    3.B: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3b-idea-acceptance-phase">Idea Acceptance Phase</a>
   
-   3.C: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#ctemplate-development-testing--documentation">Template Development, Testing & Documentation</a>
+   3.C: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#3c-template-development-testing--documentation">Template Development, Testing & Documentation</a>
   
    3.D: <a href="https://github.com/Prakash-Naveen/Azure-Partner-Quickstarts-Guide/blob/patch-3/README.md#dpublish-the-quickstart">Publish the Quickstart</a>
   
