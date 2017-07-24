@@ -63,28 +63,28 @@ Partner may have to modify the solution idea, if so recommended by Microsoft. On
 
 ### C.	Template Development, Testing & Documentation
 After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions:
-* Understand and follow <!-- TOC -->[Solution Design Consideration](#quickstart-technical-solution-best-practices)<!-- /TOC -->best practices available in this document.
-* Understand and follow **template development checklist**  available in this document.
+* Understand and follow <!-- TOC -->[Solution Design Consideration](#quickstart-technical-solution-best-practices)<!-- /TOC --> best practices available in this document.
+* Understand and follow <!-- TOC -->[template development checklist](#template-development-checklist)<!-- /TOC --> available in this document.
 * Build the QuickStart template comprising.
   *  azuredeploy.json Template File
   *  Nested templates if any
   *  azuredeploy.parameters.json file
-  *  Documentations as specified in **Section-5**
-*	Develop the required documentation for the Quickstart following best practices given **here**
-* Test the Quickstart in every scenario available **here**
+  *  Documentations as specified in <!-- TOC -->[Section-5](#testing-and-documentation)<!-- /TOC -->
+*	Develop the required documentation for the Quickstart following best practices given <!-- TOC -->[click](#documentation-and-files )<!-- /TOC -->
+* Test the Quickstart in every scenario available <!-- TOC -->[click](#testing-the-quickStart-template)<!-- /TOC -->
 
 ### D.	Publish the Quickstart
-Once template development partner has completed all steps in **Section-C**, they can move to validation phase of the solution and launch the Quickstart for public access.
-* Submit the Quickstart to Azure Quickstart validation partner for validation of the solution. Follow **this** to learn more
+Once template development partner has completed all steps in <!-- TOC -->[Section-C](#template-development,testing-&-documentation)<!-- /TOC -->, they can move to validation phase of the solution and launch the Quickstart for public access.
+* Submit the Quickstart to Azure Quickstart validation partner for validation of the solution. Follow <!-- TOC -->[](#validation-with-template-validation-partner)<!-- /TOC --> to learn more
 * Incorporate any feedback provided by azure Quickstart validation partner and submit Pull Request to submit the Quickstart to 
 <a href="https://github.com/Azure/azure-quickstart-templates">Microsoft Azure GitHub repo</a>
-*	Following the **publishing guidelines** available in the document
+*	Following the <!-- TOC -->[publishing guidelines](#publishing-the-solution)<!-- /TOC --> available in the document
 * Add the quickstart to partner Quickstarts <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">Portal</a>
 * Quickstart template will get launched on <a href="https://partnerquickstarts.azurewebsites.net/#/welcome">azure Quickstarts from Microsoft partners web page</a>. Launch activities may also include formal announcement on social media and blogs, as applicable. 
 
 ### E.	Support and Maintenance & Breakfix
-Template development partner should be providing the post publishing support, maintenance and updates on the quickstart as and when required. 
-* Follow **Support and Maintenance** Guidelines available in this document.
+Template development partner should be providing the post publishing support, maintenance and updates on the quickstart as and when required.
+* Follow  <!-- TOC -->[Support and Maintenance](#maintenance,-updates-and-support )<!-- /TOC --> Guidelines available in this document.
 
 ### F.	Partnerquickstarts Portal 
 Template development partner should be using partner quickstart portal (https://partnerquickstarts.azurewebsites.net) for end to end lifecycle management of the Quickstarts.
@@ -97,9 +97,11 @@ Portal can be used for:
 
 ## Quickstart Technical Solution Best Practices   
 ### A.	Envision the Quickstart architecture 
-First step towards building a good Quickstart would be to draw the overall low-level architecture of the solution. You should start developing template once this architecture design is finalized. Architecture design should contain overall solution components such as Virtual Network, Subnet’s, Storage accounts, Virtual Machines, App Service etc. Sample architecture diagram can be found **here**.
+First step towards building a good Quickstart would be to draw the overall low-level architecture of the solution. You should start developing template once this architecture design is finalized. Architecture design should contain overall solution components such as Virtual Network, Subnet’s, Storage accounts, Virtual Machines, App Service etc. Sample architecture diagram can be found 
+<a href="https://github.com/Azure/azure-quickstart-templates/tree/master/chef-server-compliance-delivery-devops">here</a>.
 ### B.	Azure Region Support 
-Your Quick Start should be deployable across the majority of Azure Regions. You should verify availability of services in azure regions for your template and update documentation accordingly. Services availability by region is listed **here**.
+Your Quick Start should be deployable across the majority of Azure Regions. You should verify availability of services in azure regions for your template and update documentation accordingly. Services availability by region is listed 
+<a href="https://github.com/Azure/azure-quickstart-templates/tree/master/chef-server-compliance-delivery-devops">here</a>.
 ### C.	Identify the Outside and Inside of a VM 
 As you design your template, it’s helpful to look at the requirements in terms of what’s outside and inside of the virtual machines (VMs): 
 * Outside means the VMs and other resources of your deployment, such as the network topology, tagging, references to the certs/secrets, and role-based access control. All are part of your ARM template. 
