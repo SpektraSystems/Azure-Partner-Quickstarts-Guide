@@ -8,38 +8,6 @@
  
  <!-- /TOC --> 
  
-* **2.Who can contribute**
-* **3.	How to Contribute: Process Flow**
-  * A.	Process Flowchart
-  * B.  Idea Acceptance Phase
-  * C.	Template Development, Testing & Documentation
-  * D.	Publish the Quickstart
-  * E.	Support and Maintenance & Breakfix
-  * F.	Partnerquickstarts Portal
-* **4.Quickstart Technical Solution Best Practices**
-  * A.	Envision the Quickstart architecture
-  * B.	Azure Region Support
-  * C.	Identify the Outside and Inside of a VM
-  * D.	Choosing free-form vs. known configurations
-  * E.	Designing Modularity with Nested Templates
-  * F.	Identify and build template Pre-requisite (if any)
-  * G.	Working with Unique Resource Name’s
-  * H.	Identifying and defining dependencies between resources
-  * I.	Condition based templates deployment
-  * J.	High Availability Best Practices	
-  * K.	Use Key Vault to pass secure parameter value during deployment
-  * L.	Creating Multiple instances of resources
-  * M.	Using Market place items in templates
-  * N.	Identify Post Deployment Steps
-  * O.	Development Tool
-* **5.	Template Development Checklist**
-  * A.	Template Parameters Checklist
-  * B.	Template Variables Checklist
-  * C.	Template Resources Checklist
-  * D.	Template Outputs Checklist
-  * E.	Code Formatting
-  * F.	Security Checklist
-  * G.	Storing Public artifacts Checklist
 
 ## What is Azure Quickstart by template partners
 
