@@ -8,27 +8,27 @@
  
  <!-- TOC -->
  
- 1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
- 2. [Who can contribute](#who-can-contribute)
- 3. [How to Contribute:Process Flow](#how-to-contribute-process-flow)
+1. [What is Azure Quickstart by template partners](#what-is-azure-quickstart-by-template-partners)
+2. [Who can contribute](#who-can-contribute)
+3. [How to Contribute:Process Flow](#how-to-contribute-process-flow)
  
-  3.A <a href="https://portal.azure.com">Process Flowchart</a>
+   3.A <a href="https://portal.azure.com">Process Flowchart</a>
   
-  3.B <a href="https://portal.azure.com">Process Flowchart</a>
+   3.B <a href="https://portal.azure.com">Process Flowchart</a>
   
-  3.C <a href="https://portal.azure.com">Process Flowchart</a>
+   3.C <a href="https://portal.azure.com">Process Flowchart</a>
   
-  3.D <a href="https://portal.azure.com">Process Flowchart</a>
+   3.D <a href="https://portal.azure.com">Process Flowchart</a>
   
-  3.E <a href="https://portal.azure.com">Process Flowchart</a>
+   3.E <a href="https://portal.azure.com">Process Flowchart</a>
   
-  3.F <a href="https://portal.azure.com">Process Flowchart</a>
+   3.F <a href="https://portal.azure.com">Process Flowchart</a>
   
- 4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
- 5. [Template Development Checklist](#template-development-checklist)
- 6. [Testing and Documentation](#testing-and-documentation)
- 7. [Publishing the Solution.](#publishing-the-solution.)
- 8. [Maintenance, Updates and Support](#maintenance,-updates-and-support)
+4. [Quickstart Technical Solution Best Practices](#quickstart-technical-solution-best-practices)
+5. [Template Development Checklist](#template-development-checklist)
+6. [Testing and Documentation](#testing-and-documentation)
+7. [Publishing the Solution.](#publishing-the-solution.)
+8. [Maintenance, Updates and Support](#maintenance,-updates-and-support)
  
  
  
