@@ -29,7 +29,7 @@ This additional overhead — different configurations and templates for each cus
 
 Considering all these factors, a truly free-form configuration is less appealing than at first blush.<br/>
 
-Known configurations - the t-shirt sizing approach: <br/>
+<b>Known configurations - the t-shirt sizing approach:<b> <br/>
 
 Rather than offer a template that provides total flexibility and countless variations, in our experience a common pattern is to provide<br/>
 the ability to select known configurations — in effect, standard t-shirt sizes such as sandbox, small, medium, and large. Other examples
