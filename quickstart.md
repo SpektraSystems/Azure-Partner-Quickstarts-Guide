@@ -1,4 +1,4 @@
-Want to learn how to save time when launching full-stack solutions in the cloud? Azure Partner Quickstarts are Azure Resource Manager templates created by trusted Microsoft partners and designed to help you get started with integrated, multi-artifact solutions rather 
+Want to learn how to save time when launching full-stack solutions in the cloud? Azure Partner Quickstarts are<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview">Azure Resource Manager templates</a>created by trusted Microsoft partners and designed to help you get started with integrated, multi-artifact solutions rather 
 than single applications or services on Azure. These templates are constructed to launch solutions comprising multiple applications and services from both Microsoft and Microsoft software partners, open source and proprietary. These Quickstarts help automate much of 
 the manual work that would be otherwise normally be involved in stitching artifacts together.<br/>
 
