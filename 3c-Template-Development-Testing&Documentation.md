@@ -1,11 +1,15 @@
-<u><b><h3>C. Template Development, Testing & Documentation</h3></u></b>
- <p>After acceptance of the Quickstart idea, Partner may start to develop the Quickstart solution. Partner should follow below instructions.
-<br>&nbsp•	Understand and follow <b>(#solution Design Consideration)</b> best practices available in this document</br>
-&nbsp•	Understand and follow (<b>(#template development checklist)</b> available in this document
-<br>&nbsp•	Build the QuickStart template comprising</br>
-  &nbsp&nbspo	azuredeploy.json Template File
- <br> &nbsp&nbspo	Nested templates if any</br>
- &nbsp&nbspo	azuredeploy.parameters.json file
- <br>&nbsp&nbspo	Documentations as specified in <b>(#Section-5)</b></br>
-&nbsp•	Develop the required documentation for the Quickstart following best practices given <b>(#here)</b>
-<br>&nbsp•	Test the Quickstart in every scenario available <b>(#here)</b></br></p>
+<h3> C. <u>Template Development,  Testing &amp; Documentation</u></h3>
+<p>After  acceptance of the Quickstart idea, Partner may start to develop the Quickstart  solution. Partner should follow below instructions.</p>
+<ul>
+  <li>Understand and follow <strong>(#Solution Design Consideration)</strong> best practices available in this document</li>
+  <li>Understand and follow<strong> (#template development checklist)</strong> &nbsp;available  in this document </li>
+  <li>Build the QuickStart template  comprising</li>
+
+  <li>azuredeploy.json  Template File</li>
+  <li>Nested  templates if any</li>
+  <li>azuredeploy.parameters.json  file</li>
+  <li>Documentations as specified in <strong>(#Section-5)</strong> </li>
+
+  <li>Develop the required  documentation for the Quickstart following best practices given <strong>(#here)</strong> </li>
+  <li>Test the Quickstart in every  scenario available<strong> (#here) </strong></li>
+</ul>
