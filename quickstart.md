@@ -7,8 +7,8 @@ Partner Quickstarts are intended as helpers and learning tools. You can customiz
 
 From a partner standpoint, Quickstart templates are gold standard azure deployment for specific workloads. Customers can use these templates to build complex workloads on azure comprising all fabric and applications component through automated deployment, resulting a quicker and smooth end user experience. <br /> <br />
 Templates should be targeting a specific scenario workload, or some of the commonly deployed solutions architecture across the globe. At the same time,it needs to be easily customizable as well to meet unique business needs. <br /><br/>
-<h4>Who can contribute</h4><br/>
+<h4>Who can contribute</h4>
 Microsoft Partners<br/><br/>
-<h4>Feedback, Questions and Support</h4><br/>
+<h4>Feedback, Questions and Support</h4>
 In case of feedback, questions or general queries, send an email to quickstartssupport@spektrasystems.com<br/><br/>
 
