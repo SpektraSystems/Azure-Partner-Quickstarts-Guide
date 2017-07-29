@@ -11,4 +11,4 @@
   <li>Documentations as specified in <a href="./6a.html">section 5</a> </li>
 
   <li>Develop the required  documentation for the Quickstart following best practices given <a href="./6b.html">here</a></li>
-  <li>Test the Quickstart in every  scenario available<a href="./6a.html">here</a></li></ul>
+  <li>Test the Quickstart in every  scenario available <a href="./6a.html">here</a></li></ul>
