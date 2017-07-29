@@ -1,4 +1,4 @@
-<h4><b> C. Template Development,  Testing &amp; Documentation</b></h4>
+<h4><b>C. Quickstart Development, Testing & Documentation</b></h4>
 <p>After  acceptance of the Quickstart idea, Partner may start to develop the Quickstart  solution. Partner should follow below instructions</p>
 <ul>
   <li>Understand and follow <strong>(#Solution Design Consideration)</strong> best practices available in this document</li>
