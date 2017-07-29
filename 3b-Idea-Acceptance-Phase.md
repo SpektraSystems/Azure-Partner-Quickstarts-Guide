@@ -1,5 +1,10 @@
 <h4><b>B. Submit your quickstart Idea</b></h4> 
-Quickstart solutions goes through multiple checks and validation before getting published on<a href="https://partnerquickstarts.azurewebsites.net/#/welcome"> azure Quickstarts from Microsoft partners portal</a>  <br/><br/>
-Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  
-Microsoft QuickStart team will work with you for this process.
-<br/><br/>
+Partners can submit their quickstart idea&rsquo;s by filling out the form at <a href="https://bit.ly/submitapq">https://bit.ly/submitapq</a><br>
+An ideal submission should include :<br>
+&bull; Title of the Quickstart with brief overview of solution<br>
+&bull; Value proposition with target geo segment<br>
+&bull; Azure Solution Components of Quickstart<br>
+&bull; 3rd Party/Market Place items included in the Quickstart<br>
+&bull; Basic Solution Architecture Diagram<br>
+Microsoft would be evaluating the idea and provide feedback accordingly. Partner may or may not have to modify the QS plan based on the feedback. Once Quickstart idea is approved, Kick-off meeting will be scheduled to discuss the solution aspects and timelines for go-live of Quickstart. Quickstart program partner, Spektra Systems would be helping the quickstart development partner throughout this process
+
