@@ -1,7 +1,7 @@
 <h4><b>C. Quickstart Development, Testing & Documentation</b></h4>
 <p>After  acceptance of the Quickstart idea, Partner may start to develop the Quickstart  solution. Partner should follow below instructions</p>
 <ul>
-  <li>Understand and follow <strong>(#Solution Design Consideration)</strong> best practices available in this document</li>
+  <li>Understand and follow <a href="./Quickstartarchitecture.html">Solution Design Consideration</a>best practices available in this document</li>
   <li>Understand and follow<strong> (#template development checklist)</strong> &nbsp;available  in this document </li>
   <li>Build the QuickStart template  comprising</li>
 
@@ -11,6 +11,4 @@
   <li>Documentations as specified in <strong>(#Section-5)</strong> </li>
 
   <li>Develop the required  documentation for the Quickstart following best practices given <strong>(#here)</strong> </li>
-  <li>Test the Quickstart in every  scenario available<strong> (#here) </strong></li>
-</ul>
-
+  <li>Test the Quickstart in every  scenario available<strong> (#here) </strong></li></ul>
