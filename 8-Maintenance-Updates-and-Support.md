@@ -1,4 +1,4 @@
-<h4><b>8. Maintenance, Updates and  Support</b></h4>
+
 After Quickstart  launch, template development partner will need to maintain, update and support  the solution as well, as and when required. This would include
 <ul>
   <li>Assisting Customer/partners in  deploying the solution as and when required(You would be sharing your support  details on Partnerquickstarts portal page)</li>
