@@ -1,4 +1,3 @@
-<br><h4><b>A. Quickstart Break  Fix Process</b> </h4>
 <p>Quickstart  shall be tested regularly to ensure that it remains valid and deploys  successfully. All the validation reports are visible under partner quickstart  portal. All partner admins shall be notified as soon as any validation record  added with failed status. &nbsp;Follow diagram  explains the flow when validation fails for any existing valid quickstart. <br><img src="Images/Images/16.png" width="700"/></p>
 <br><p>In a nutshell</p>
 <ul>
