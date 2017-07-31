@@ -1,4 +1,3 @@
-<br><h4><b>D. Publish the  Quickstart</b></h4>
 Once template development partner has completed all steps in <a href="./Quickstartdevelopment.html">Section C</a>, they can move to validation phase of the solution and launch the Quickstart for public access
 <ul>
 <li>Submit the Quickstart to Azure Quickstart validation partner for validation of the solution. Follow <a href="./7a.html">this</a> to learn more</p>
