@@ -10,4 +10,4 @@ Templates should be targeting a specific scenario workload, or some of the commo
 <h4>Who can contribute</h4>
 Microsoft Partners<br/><br/>
 <h4>Feedback, Questions and Support</h4>
-In case of feedback, questions or general queries, send an email to <a hreff="apq@spektrasystems.com">apq@spektrasystems.com</a><br/><br/>
+In case of feedback, questions or general queries, send an email to <a href="apq@spektrasystems.com">apq@spektrasystems.com</a><br/><br/>
