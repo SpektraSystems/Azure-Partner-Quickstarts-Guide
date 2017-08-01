@@ -1,5 +1,6 @@
 <br>
-Quickstart solutions goes through multiple checks and validation before getting published on <a href="https://partnerquickstarts.azurewebsites.net/#/welcome"> azure Quickstarts from Microsoft partners portal</a>.  <br/>
+Quickstart solutions goes through multiple checks and validation before getting published on <a href="https://partnerquickstarts.azurewebsites.net/#/welcome"> azure Quickstarts from Microsoft partners portal</a>.  
+<br>
 Following flow chart explains the high level process to be completed for a new quickstart templates to get published.  
 Microsoft Azure partner QuickStarts team along with quickstarts program support partner (Spektra Systems) will work with you to get your quickstart published through this process.
 <br><br>
