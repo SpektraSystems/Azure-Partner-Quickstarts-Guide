@@ -1,4 +1,4 @@
-Template  development partner should be using partner quickstart portal <a href="https://partnerquickstarts.azurewebsites.net">https://partnerquickstarts.azurewebsites.net</a> for end to end lifecycle management of the Quickstarts. 
+<br>Template  development partner should be using partner quickstart portal <a href="https://partnerquickstarts.azurewebsites.net">https://partnerquickstarts.azurewebsites.net</a> for end to end lifecycle management of the Quickstarts. 
 
   <ul><li>Request  login for the portal if not available already by writing to <a href="mailto:quickstartssupport@spektrasystems.com">apq@spektrasystems.com</a></li></ul>
 
