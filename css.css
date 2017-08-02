@@ -1,5 +1,5 @@
 .box{
-	background-color:#F8F8F8;
+	background-color:#F4F4F4;
 
 }
 .men li{
@@ -7,9 +7,9 @@
 
 }
 .men li a{
-	background-color:#3e4d5c;
+	background-color:#333333;
 	color:white;
-	font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;
+	font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
 	
 }
 
@@ -26,7 +26,7 @@
 	background-color:#fff;
 	line-height:15px;
 	color:black;
-	font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;
+	font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
 	
 }
 .men li a:focus{
@@ -38,16 +38,17 @@
 }
 
 .hdr{
-background-color:#3e4d5c;
+background-color:#333333;
 
 }
 
 .txth a{
-font-weight:200;
+font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+font-weight:400;
 font-size:20px;
 letter-spacing:-.01em;
-line-height:1.22;
-color:#fff;
+line-height:1.5;
+color:#00abec;
 
 }
 
@@ -55,22 +56,39 @@ color:#fff;
 	margin-left:25px;
 }
 
-.txt2,  .txt2 a, .txt a, .txt1{
+.txt2,  .txt2 a, .txt1{
 color:#fff;
-font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;
+font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
 }
-.txt {
+
+
+.txt a{
 color:#fff;
+font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+font-weight:400;
 font-size:15px;
+letter-spacing:-.01em;
+line-height:1.5;
+text-decoration:none;
 }
+
+.txtf{
+	color:#fff;
+	font-size:15px;
+	font-weight:400;
+	}
+
+.txt:hover{
+	color:#0050c5;
+	}
+
 
 .txtho {
-color:#fff;
+color:#00abec;
 font-size:20px;
+text-decoration:none;
 }
 
-font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;
-}
 .txt a:hover{
 	text-decoration:underline;
 	color:#fff;
@@ -101,9 +119,12 @@ line-height:20px;
 }
 
 .edit{
-		
-	font-size:18px;	
-	font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;	
+font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+font-weight:400;
+font-size:15px;
+letter-spacing:-.01em;
+line-height:1.5;
+text-decoration:none;
 }
 
 .edit a{
@@ -111,13 +132,20 @@ line-height:20px;
 }
 
 .rtxt{
-color:#0066FF;
-font-weight:600;
-font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;
+color:#00abec;
+font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+font-weight:400;
+font-size:20px;
+line-height:1.5;
+text-decoration:none;
 margin-left:-18px;
 }
 
 .rctxt{
-font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif !important;
+font-family:'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+}
+
+.space{
+	margin-left:60px;
 }
 

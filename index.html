@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Azure Quickstarts Guide</title>
+<link href="Images/logo.png" type="image/png" rel="icon" sizes="1000*1000"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="css.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-------------------------Header--------------------------->
+<div class="container-fluid hdr">
+	<div class="row"><br />
+		<div class="col-md-4"><span class="glyphicon glyphicon-home txtho"></span>&nbsp;&nbsp;<span class="txth"><a href="index.html">Azure Partner Quickstarts Contibutor's Guide</a></span></div>
+		<div class="col-md-2"></div>
+		<div class="col-md-2"><p>
+	  </div>
+		<div class="col-md-4"><h4 class="space">    
+        
+        <span class="glyphicon glyphicon-download-alt txtf"></span><span class="txt"><a href="http://bit.ly/apqguidedownload" Target="_blank"> Download Guide</a></span>
+	 &nbsp;&nbsp;&nbsp;
+        
+        <span class="glyphicon glyphicon-cloud txtf"></span><span class="txt"><a href="https://partnerquickstarts.azurewebsites.net/#/welcome" Target="_blank"> APQ Portal</a></span>
+		
+		&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope txtf"></span>&nbsp;<span class="txt"><a href="mailto:apq@spektrasystems.com" Target ="blank" style="color:white">Contact Us</a></span></h4>
+	</div>
+	</div>
+</div>
+
+
+<!----------------------Side Menu-------------------------------->
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-3"><br />
+<nav>
+	<br />
+    <ul class="nav men">
+	    <li><a onclick="getData(1)" href="index.html"><span class="glyphicon glyphicon-arrow-right"></span>What is Azure Quickstart by Template &nbsp;&nbsp;&nbsp;&nbsp;Partners</a></li>		
+
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false"> <span class="glyphicon glyphicon-arrow-down"></span> How to Contribute: Process Flow</a>
+			<ul class="nav collapse menu" id="submenu1" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(2)" href="#">A. Process Flowchart</a></li>
+				<li><a onclick="getData(3)" href="#">B. Submit Your Quickstart Idea</a></li>
+				<li><a onclick="getData(4)" href="#">C. Quickstart Development, Testing & Documentation</a></li>
+				<li><a onclick="getData(5)" href="#">D. Publish The Quickstart</a></li>
+				<li><a onclick="getData(6)" href="#">E. Support And Maintenance & Breakfix</a></li>
+				<li><a onclick="getData(7)" href="#">F. Partnerquickstarts Portal</a></li>
+			</ul>
+		</li>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu2" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> Quickstart Solution Technical Best Practices</a>
+			<ul class="nav collapse menu" id="submenu2" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(8)" href="#">A. Envision The Quickstart Architecture</a></li>
+				<li><a onclick="getData(9)" href="#">B. Azure Region Support</a></li>
+				<li><a onclick="getData(10)" href="#">C. Identify The Outside And Inside of a VM</a></li>
+				<li><a onclick="getData(11)" href="#">D. Choosing Free-Form VS. Known Configurations</a></li>
+				<li><a onclick="getData(12)" href="#">E. Designing Modularity With Nested Templates</a></li>
+				<li><a onclick="getData(13)" href="#">F. Identify And Build Template Pre-Requisite(If Any)</a></li>
+				<li><a onclick="getData(14)" href="#">G. Working With Unique Resource Names</a></li>
+				<li><a onclick="getData(15)" href="#">H. Identifying And Defining Dependencies Between Resources </a></li>
+				<li><a onclick="getData(16)" href="#">I. Condition Based Templates Deployment </a></li>
+				<li><a onclick="getData(17)" href="#">J. High Availability Best Practices </a></li>
+				<li><a onclick="getData(18)" href="#">K. Use Key Vault To Pass Secure Parameter Value During Deployment</a></li>
+				<li><a onclick="getData(19)" href="#">L. Creating Multiple Instances Of Resources</a></li>
+				<li><a onclick="getData(20)" href="#">M. Using Market Place Items In Templates</a></li>
+				<li><a onclick="getData(21)" href="#">N. Identify Post Deployment Steps</a></li>
+				<li><a onclick="getData(22)" href="#">O. Dealing With Pre-Requisite Resources</a></li>
+				<li><a onclick="getData(23)" href="#">P. Development Tool</a></li>
+			</ul>
+		</li>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu3" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> Template Development Checklist</a>
+			<ul class="nav collapse menu" id="submenu3" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(24)" href="#">A. Template Parameters Checklist</a></li>
+				<li><a onclick="getData(25)" href="#">B. Template Variables Checklist</a></li>
+				<li><a onclick="getData(26)" href="#">C. Template Resources Checklist </a></li>
+				<li><a onclick="getData(27)" href="#">D. Template Outputs Checklist</a></li>
+				<li><a onclick="getData(28)" href="#">E. Code Formatting</a></li>
+				<li><a onclick="getData(29)" href="#">F. Security Checklist</a></li>
+				<li><a onclick="getData(30)" href="#">G. Storing Artifacts Checklist </a></li>	
+				</ul>
+		</li>
+				<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu4" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> Testing And Documentation</a>
+			<ul class="nav collapse menu" id="submenu4" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(31)" href="#">A. Testing The QuickStart Template</a></li>
+				<li><a onclick="getData(32)" href="#">B. Documentation And files</a></li>
+				<li><a onclick="getData(33)" href="#">C. Files And Folder Structure And Naming Convention</a></li>
+				<li><a onclick="getData(34)" href="#">D. README.md Document Checklist</a></li>
+				<li><a onclick="getData(35)" href="#">E. Metadata.json File Best Practices</a></li>
+				<li><a onclick="getData(36)" href="#">F. Creating Azuredeploy.parameters.json File</a></li>
+				<li><a onclick="getData(37)" href="#">G. Usage of Logo/TradeMarks</a></li>
+				<li><a onclick="getData(38)" href="#">H. Preparing Template For Automated Travis CI Validation</a></li>
+				</ul>
+			</li>
+	 <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu5" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> Publishing The Solution</a>
+			<ul class="nav collapse menu" id="submenu5" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(39)" href="#">A. Validation With Template Validation Partner</a></li>
+				<li><a onclick="getData(40)" href="#">B. Getting Ready For GiTHub Pull Request</a></li>
+				<li><a onclick="getData(41)" href="#">C. Creating Pull Request in GitHub Azure Quickstart Repo(Using CLI)</a></li>
+				<li><a onclick="getData(42)" href="#">D. Creating Pull Request in GitHub Azure Quickstart Repo (Using GUI)</a></li>
+				<li><a onclick="getData(43)" href="#">E. Completing Microsoft CLA(Contribution License Agreement)</a></li>
+				<li><a onclick="getData(44)" href="#">F. Verify Automated Validation Check With Travis</a></li>
+				<li><a onclick="getData(45)" href="#">G. Updating Pull Requests</a></li>
+				<li><a onclick="getData(46)" href="#">H. Add Quickstart to QS Portal</a></li>
+				<li><a onclick="getData(47)" href="#">I. Quickstart Launch</a></li>
+				</ul>
+			</li>
+	<li><a onclick="getData(48)" href="#" id="btn-1" data-toggle="collapse" data-target="#submenu6" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> Maintenance, Updates And Support</a>
+			<ul class="nav collapse menu" id="submenu6" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(49)" href="#">A. Quickstart Break Fix Process</a></li>
+				<li><a onclick="getData(50)" href="#">B. Portal Support</a></li>
+				</ul>
+			</li>
+<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu7" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> Additional Resources</a>
+			<ul class="nav collapse menu" id="submenu7" role="menu" aria-labelledby="btn-1">
+				<li><a onclick="getData(51)" href="#">A. Refrences Quickstart Resources</a></li>
+				<li><a onclick="getData(52)" href="#">B. Contact</a></li>
+				</ul>
+			</li>
+	</ul>
+	
+</nav>
+<br />
+
+</div>
+
+
+
+<!-----------------Right Content------------------------->
+
+<div class="col-md-9 bg">
+	<br/>
+	<div class="col-md-10">
+	<h3><span class="rtxt" id="heading"></span></h3></div>
+	<div class="col-md-2">
+	<span class="glyphicon glyphicon-pencil edit1"></span><span class="edit" ><a id="editLink" href="" target="_blank"> Edit</span></a></div><br /><br />
+	
+	<div id="results" class="rctxt"></div>
+
+	</div>
+</div>   
+</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
