@@ -1,3 +1,4 @@
+<br>
 <p>After  acceptance of the Quickstart idea, Partner may start to develop the Quickstart  solution. Partner should follow below instructions</p>
 <ul>
   <li>Understand and follow <a href="./Quickstartarchitecture.html">solution design consideration</a>best practices available in this document</li>
