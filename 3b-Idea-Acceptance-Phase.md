@@ -1,5 +1,5 @@
 <br>
-Partners can submit their quickstart idea&rsquo;s by filling out the form at <a href="https://bit.ly/submitapq">https://bit.ly/submitapq</a><br>
+Partners can submit their quickstart idea&rsquo;s by filling out the form at <a href="https://bit.ly/submitapq" Target="blank">https://bit.ly/submitapq</a><br>
 An ideal submission should include :<br>
 &bull; Title of the Quickstart with brief overview of solution<br>
 &bull; Value proposition with target geo segment<br>
