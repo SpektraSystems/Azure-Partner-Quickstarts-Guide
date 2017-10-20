@@ -4,14 +4,7 @@
 		  $("#heading").html("Process Flowchart");
       function getData(type) 
       {
-		  
-       if (type == 2)
-        {
-          gitHubUrl ="https://raw.githubusercontent.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/gh-pages/3a-Process-Flowchart.md";
-          $("#editLink").attr("href", "https://github.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/edit/gh-pages/3a-Process-Flowchart.md");
-		  $("#heading").html("Process Flowchart");
-        }
-		
+			
 	////////////////////////////////////////////////////////////////////////////////////////////////////	
         else if (type == 3)
         {
