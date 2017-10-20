@@ -1,7 +1,7 @@
 // JavaScript Document
- var gitHubUrl = "https://raw.githubusercontent.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/gh-pages/quickstart.md";
-      $("#editLink").attr("href", "https://github.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/edit/gh-pages/quickstart.md");
-	  $("#heading").html("What Is Azure Quickstart By Template Partners");
+ var gitHubUrl = "https://raw.githubusercontent.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/gh-pages/3a-Process-Flowchart.md";
+      $("#editLink").attr("href", "https://github.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/edit/gh-pages/3a-Process-Flowchart.md");
+		  $("#heading").html("Process Flowchart");
       function getData(type) 
       {
 		  
