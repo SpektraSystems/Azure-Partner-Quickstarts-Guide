@@ -9,7 +9,7 @@
         {
           gitHubUrl ="https://raw.githubusercontent.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/gh-pages/3a-Process-Flowchart.md";
           $("#editLink").attr("href", "https://github.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/edit/gh-pages/3a-Process-Flowchart.md");
-		  $("#heading").html("Submit Your QuickStart Idea");
+		  $("#heading").html("Process Flowchart");
         }
 		
 	////////////////////////////////////////////////////////////////////////////////////////////////////	
@@ -17,7 +17,7 @@
         {
           gitHubUrl = "https://raw.githubusercontent.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/gh-pages/3b-Idea-Acceptance-Phase.md";
           $("#editLink").attr("href", "https://github.com/SpektraSystems/Azure-Partner-Quickstarts-Guide/edit/gh-pages/3b-Idea-Acceptance-Phase.md");
-		  $("#heading").html("Process Flowchart");
+		  $("#heading").html("Submit Your Quickstart Idea");
         }
 	//////////////////////////////////////////////////////////////////////////////////////////////////	
 		 else if (type == 4)
